@@ -1,37 +1,85 @@
-## Welcome to GitHub Pages
+<!--HTML always starts with this "HEAD" code-->
+<!DOCTYPE html>
+<!--Set the language to English-->
+<html lang="en">
+    <head>
+   <!--META TAGS-->
+   <!-- META here means data about data - so information about the code-->
+    <meta charset="utf-8"><!--Characters we are using-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--What is visible-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-You can use the [editor on GitHub](https://github.com/angelasl/Black-Panther-Game/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <meta name="description" content="Black Panther Game"/>
 
-### Markdown
+    <!-- The Tile shows up in the tab on the browser-->
+    <!-- Add a title for your game-->
+    <title> Black Panther Game</title>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
 
-```markdown
-Syntax highlighted code block
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+    <!--This is a free google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
 
-# Header 1
-## Header 2
-### Header 3
+    </head>
 
-- Bulleted
-- List
+    <!-- The body is where the main code lives-->
+    <body>
 
-1. Numbered
-2. List
+    <!-- This section has the title and directions-->
+    <section class="header">
+        <p class="title">Black Panther</p>
+        <p class="sub-title">A Shell Game</p>
+        <p class="directions">Enter Your Name to Play:</p>
+        <div class="name-input">
+          <input id="name" class="player-name" name="user-name" type="text" placeholder="What's your name?">
+          <br>
+          <br>
+          <!-- This button will say hello to the player-->
+          <!--What should the button say?-->
+          <button id="name-button" type="button">Submit</button>
+      </div>
+      <!--Add a class to the the p tag called directions. Type out the directions of the game. Use the <br> to break the line-->
+      <p class="directions">Click one of the cards. If you get Shuri, you will get 5 points. If not, the computer will get 5 points. The first to 15 points will win! Make sure to click "Try Again!" between each guess.</p>
+    </section>
+      <!-- End of header section-->
 
-**Bold** and _Italic_ and `Code` text
+    <!-- This section shows the images of the cards-->
+    <section class="cards">
+      <img id="card1" class="face-card" src="bplogo.png" alt="black panther logo">
+      <img id="card2" class="face-card" src="bplogo.png" alt="black panther logo">
+      <img id="card3" class="face-card" src="bplogo.png" alt="black panther logo">
+      <img id="card4" class="face-card" src="bplogo.png" alt="black panther logo">
+    </section>
+    <!-- End of the cards section-->
 
-[Link](url) and ![Image](src)
-```
+    <!-- This section is where we keep track of the score-->
+    <section class="score">
+      <div class="message">
+        <p id="text"></p>
+        <!--This button will reset the card images-->
+        <button id="tryagain-button" type="button">Try Again!</button>
+      </div>
+    </section>
+    <!-- End of the score section -->
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+    <!-- This section is for the copyright information-->
+    <section id="footer">
+      <br>
+      <img class="logo" src="gwclogo.png" alt="GWC logo">
+      <p class="copyright">Made with <strong>vibranium</strong> by Angela Lee &copy;  2018</p>
+    </section>
+    <!-- End of the copyright section-->
 
-### Jekyll Themes
+    <!-- Link to the jQuery and JavaScript files-->
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    </body>
+  <!-- end of Body-->
+</html>
+<!-- end of document-->
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/angelasl/Black-Panther-Game/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
